@@ -36,13 +36,20 @@ class App extends Component {
     { name: 'Tirupati', country: 'India' },
     ]
   }
+  const indiancities = cityList.filter((pair) =>{
+    return pair[1] == "India";
+  });
 
   render() {
     return (
       <div id="main">
-        {/* Do not remove the main div */}
+        <ol>
+      {indiancities.map((pair,i) =>{
+          return <li key={"location" +(i+1)}>{pair[0]}</li>;
+  })}
+      </ol>
       </div>
-    )
+    );
   }
 }
 
