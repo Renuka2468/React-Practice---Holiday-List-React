@@ -37,7 +37,7 @@ class App extends Component {
     ]
   }
   const indiancities = cityList.filter((pair) =>{
-    return pair[1] == "India";
+    return pair[1] === "India";
   });
 
   render() {
