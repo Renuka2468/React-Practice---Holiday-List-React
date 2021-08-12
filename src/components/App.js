@@ -25,12 +25,13 @@ class App extends Component {
   render() {
     let indiancities = this.cityList.filter((pair) => {
       return pair.country === "India";
+      console.log(pair.country);
     });
     return (
       <div id="main">
         <ol>
       {indiancities.map((pair,i) =>{
-          return <li key={`location${i+1}`}>{item.name}</li>;
+          return <li key={`location${i+1}`}>{pair.name}</li>
   })}
       </ol>
       </div>
